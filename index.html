@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>RoughNotation</title>
+  <meta name="description" content="Small JavaScript library to annotate a web page in a hand-drawn style">
+  <link rel="icon" href="images/fav.png" type="image/png">
+
+  <meta property="og:title" content="RoughNotation">
+  <meta property="og:description" content="Small JavaScript library to annotate a web page in a hand-drawn style">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://roughnotation.com/">
+  <meta property="og:image" content="https://roughnotation.com/images/social.png">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RoughNotation">
+  <meta name="twitter:description" content="Small JavaScript library to annotate a web page in a hand-drawn style">
+  <meta name="twitter:image" content="https://roughnotation.com/images/social.png">
+  <meta name="twitter:image:width" content="400">
+  <meta name="twitter:image:height" content="400">
+
+  <style>
+    body {
+      font-size: 18px;
+      font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      position: relative;
+      max-width: 640px;
+      padding: 24px 16px 0px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .sizedPanel {
+      max-width: 640px;
+      padding: 0 16px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    a,
+    a:visited,
+    a:hover {
+      color: inherit;
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 2em;
+      letter-spacing: 2px;
+      display: inline-block;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.6em;
+      letter-spacing: 1px;
+      display: inline-block;
+    }
+
+    button {
+      background: none;
+      font-family: inherit;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 10px 16px;
+      border: 2px solid;
+      cursor: pointer;
+      letter-spacing: 1px;
+      outline: none;
+      user-select: none;
+    }
+
+    main button {
+      margin-top: 8px;
+    }
+
+    main span {
+      white-space: nowrap;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+  </style>
+
+  <script defer src="./node_modules/rough-notation/lib/rough-notation.iife.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Rough Notation</h1>
+
+    <p>A small JavaScript library to create and animate <span class="abox">annotations</span> on a web page</p>
+    <p>
+      Rough Notation uses <a href="https://roughjs.com" target="_blank" rel="noopener">RoughJS</a> to create a
+      hand-drawn look and feel.
+      Elements can be annotated in a number of different styles. Animation duration and delay can be configured, or
+      just turned off.
+    </p>
+    <p>Rough Notation is about <span class="acircle">3.2kb</span> in size when gzipped, and the code is available on
+      GitHub.</p>
+    <p>
+      <a target="_blank" href="https://github.com/pshihn/rough-notation" rel="noopener">
+        <button>View on Github + Docs</button>
+      </a>
+    </p>
+    <p>&nbsp;</p>
+    <p>Following are the different styles of annotations. Hit the <strong>annotate</strong> button in each section
+      to see the animated annotation</p>
+  </header>
+  <main>
+    <section id="underlineSection" style="background: #FFEBEE;">
+      <div class="sizedPanel">
+        <h3>Underline</h3>
+        <p>Create a sketchy <span>underline</span> below an element.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="boxSection" style="background: #F3E5F5;">
+      <div class="sizedPanel">
+        <h3>Box</h3>
+        <p>This style draws a <span>box</span> around the element.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="circleSection" style="background: #E3F2FD;">
+      <div class="sizedPanel">
+        <h3>Circle</h3>
+        <p>Draw a <span>circle</span> around the element.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="highlightSection" style="background: #f5f5f5;">
+      <div class="sizedPanel">
+        <h3>Highlight</h3>
+        <p>Creates a highlight effect as if maked by a <span>highlighter</span> .</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="strikeSection" style="background: #E8F5E9;">
+      <div class="sizedPanel">
+        <h3>Strike-Through</h3>
+        <p>Draw a hand-drawn line through an element creating a <span>stroke-through</span> effect.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="crossSection" style="background: #FFFDE7;">
+      <div class="sizedPanel">
+        <h3>Crossed-Off</h3>
+        <p>To symbolize rejection, use a <span>crossed-off</span> effect on an element.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="groupSection" style="background: #FBE9E7;">
+      <div class="sizedPanel">
+        <h3>Annotation Group</h3>
+        <p>Rough Notation provides a way to order the animation of annotations by creating an
+          <span>annotation-group</span>. Pass the list of annotations to create a group.
+          When <i>show</i> is called on the group, the annotations are animated in order.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="configSection" style="background: #FFF3E0;">
+      <div class="sizedPanel">
+        <h3>Annotation Styling</h3>
+        <p>Various properties of the annotation can be configured, like color, strokeWidth, <span>animation
+            duration</span>.
+        </p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="noanimSection" style="background: #ECEFF1;">
+      <div class="sizedPanel">
+        <h3>No Animation</h3>
+        <p>Of course you don't have to animate the annotation, it just shows up when <i>show</i> is called.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="sizedPanel">
+        <p>&nbsp;</p>
+        <p>
+          All the code and documentation is available on Github.
+        </p>
+        <p>
+          <a target="_blank" href="https://github.com/pshihn/rough-notation" rel="noopener">
+            <button>View on Github</button>
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
