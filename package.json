@@ -1,0 +1,22 @@
+{
+  "name": "rough-notation-web",
+  "version": "1.0.0",
+  "description": "roughnotation.com website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshihn/rough-notation-web.git"
+  },
+  "author": "Preet Shihn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pshihn/rough-notation-web/issues"
+  },
+  "homepage": "https://github.com/pshihn/rough-notation-web#readme",
+  "dependencies": {
+    "rough-notation": "0.0.2"
+  }
+}
