@@ -18,7 +18,7 @@
     const a1 = annotate($('h1'), { type: 'highlight', color: '#FFF176' });
     const a2 = annotate($('header span.abox'), { type: 'box', color: '#F44336', padding: 3 });
     const a3 = annotate($('header a'), { type: 'underline', color: '#2196F3', padding: 3, strokeWidth: 3 });
-    const a4 = annotate($('header span.acircle'), { type: 'circle', color: '#F44336', padding: 2 });
+    const a4 = annotate($('header span.acircle'), { type: 'circle', color: '#F44336', padding: 5 });
     const ag = annotationGroup([a1, a2, a3, a4]);
     ag.show();
   }
@@ -28,6 +28,8 @@
     const a1 = annotate($('#underlineSection h3'), config);
     const a2 = annotate($('#underlineSection span'), config);
     $('#underlineSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
@@ -38,16 +40,20 @@
     const a1 = annotate($('#boxSection h3'), config);
     const a2 = annotate($('#boxSection span'), config);
     $('#boxSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
   }
 
   {
-    const config = { type: 'circle', padding: 3, color: '#0D47A1' };
+    const config = { type: 'circle', padding: 6, color: '#0D47A1' };
     const a1 = annotate($('#circleSection h3'), config);
     const a2 = annotate($('#circleSection span'), config);
     $('#circleSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
@@ -58,6 +64,8 @@
     const a1 = annotate($('#highlightSection h3'), config);
     const a2 = annotate($('#highlightSection span'), config);
     $('#highlightSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
@@ -68,6 +76,8 @@
     const a1 = annotate($('#strikeSection h3'), config);
     const a2 = annotate($('#strikeSection span'), config);
     $('#strikeSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
@@ -78,8 +88,19 @@
     const a1 = annotate($('#crossSection h3'), config);
     const a2 = annotate($('#crossSection span'), config);
     $('#crossSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
+    });
+  }
+
+  {
+    const config = { type: 'highlight', color: '#FFD54F', animationDuration: 1500, multiline: true, iterations: 1 };
+    const a1 = annotate($('#multilineSection #mlspan'), config);
+    $('#multilineSection button').addEventListener('click', () => {
+      a1.hide();
+      a1.show();
     });
   }
 
@@ -87,6 +108,8 @@
     const a1 = annotate($('#noanimSection h3'), { type: 'box', color: '#263238', animate: false });
     const a2 = annotate($('#noanimSection i'), { type: 'underline', color: '#263238', strokeWidth: 4, animate: false });
     $('#noanimSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
@@ -96,6 +119,8 @@
     const a1 = annotate($('#configSection h3'), { type: 'box', color: '#D50000', strokeWidth: 10 });
     const a2 = annotate($('#configSection span'), { type: 'box', color: '#33691E', animationDuration: 3000 });
     $('#configSection button').addEventListener('click', () => {
+      a1.hide();
+      a2.hide();
       a1.show();
       a2.show();
     });
@@ -107,6 +132,7 @@
     const a3 = annotate($('#groupSection i'), { type: 'underline', color: '#BF360C', animationDuration: 300 });
     const ag = annotationGroup([a2, a3, a1]);
     $('#groupSection button').addEventListener('click', () => {
+      ag.hide();
       ag.show();
     });
   }
