@@ -96,6 +96,10 @@
       white-space: nowrap;
     }
 
+    main span#mlspan {
+      white-space: normal;
+    }
+
     section {
       padding: 32px 0;
     }
@@ -115,7 +119,7 @@
       Elements can be annotated in a number of different styles. Animation duration and delay can be configured, or
       just turned off.
     </p>
-    <p>Rough Notation is about <span class="acircle">3.2kb</span> in size when gzipped, and the code is available on
+    <p>Rough Notation is <span class="acircle">3.7kb</span> in size when gzipped, and the code is available on
       GitHub.</p>
     <p>
       <a target="_blank" href="https://github.com/pshihn/rough-notation" rel="noopener">
@@ -176,6 +180,24 @@
       <div class="sizedPanel">
         <h3>Crossed-Off</h3>
         <p>To symbolize rejection, use a <span>crossed-off</span> effect on an element.</p>
+        <p>
+          <button>annotate</button>
+        </p>
+      </div>
+    </section>
+    <section id="multilineSection" style="background: #FFF8F1;">
+      <div class="sizedPanel">
+        <h3>Multiple lines</h3>
+        <p>Ability to annotate inline content that can span multiple lines</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan nisi hendrerit augue molestie tempus.
+          Phasellus purus quam, aliquet nec commodo quis, pharetra ut orci. <span id="mlspan">Donec laoreet ligula nisl,
+            placerat molestie mauris luctus id. Fusce dapibus non libero nec lobortis. Nullam iaculis nisl ac eros
+            consequat, sit amet placerat
+            massa vulputate. Maecenas euismod volutpat ultrices. Pellentesque felis ex, ullamcorper in felis finibus,
+            feugiat
+            dignissim augue. </span> Integer malesuada non eros consectetur interdum. Mauris mollis non urna in porta.
+        </p>
         <p>
           <button>annotate</button>
         </p>
