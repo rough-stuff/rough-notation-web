@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/pshihn/rough-notation-web#readme",
   "dependencies": {
-    "rough-notation": "^0.3.2"
+    "rough-notation": "^0.3.3"
   }
 }
