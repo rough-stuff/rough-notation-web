@@ -96,6 +96,16 @@
   }
 
   {
+    const a1 = annotate($('#bracketSection h3'), { type: 'bracket', color: 'red', strokeWidth: 2, brackets: 'top' });
+    const a2 = annotate($('#bracketSection .blockp'), { type: 'bracket', color: 'red', strokeWidth: 2, padding: [2, 10], brackets: ['left', 'right'] });
+    const ag = annotationGroup([a2, a1]);
+    $('#bracketSection button').addEventListener('click', () => {
+      ag.hide();
+      ag.show();
+    });
+  }
+
+  {
     const config = { type: 'highlight', color: '#FFD54F', animationDuration: 1500, multiline: true, iterations: 1 };
     const a1 = annotate($('#multilineSection #mlspan'), config);
     $('#multilineSection button').addEventListener('click', () => {
